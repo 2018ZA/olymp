@@ -1,224 +1,279 @@
+# data/moex_client.py
 """
-Клиент для получения данных с MOEX API.
-Поддержка множественных запросов для нескольких инструментов.
+Клиент для получения данных с Московской Биржи (MOEX) через библиотеку moexalgo.
+Полностью переработан для использования moexalgo вместо старого API.
 """
 
-import requests
 import pandas as pd
+from moexalgo import Ticker, Market
 from datetime import datetime, timedelta
-from typing import List, Dict, Optional
-from utils.logger import logger
-from utils.validators import validate_market_data
+from typing import List, Dict, Optional, Union
+import logging
+
+logger = logging.getLogger(__name__)
 
 class MoexClient:
-    """Клиент для работы с MOEX ISS API"""
-    
+    """
+    Клиент для взаимодействия с MOEX ALGOPACK через библиотеку moexalgo.
+    Предоставляет методы для получения свечей, стаканов и другой рыночной информации.
+    """
+
     def __init__(self):
-        self.base_url = 'https://iss.moex.com/iss'
-        self.cache = {}  # Кэш для хранения последних данных
-        
-    def get_history(self, ticker: str, days: int) -> pd.DataFrame:
+        """Инициализация клиента."""
+        # Требуется Python >= 3.12 и установка moexalgo[dataframe]
+        pass
+
+    def get_candles(self, ticker: str, days: int = 3, interval: int = 60) -> pd.DataFrame:
         """
-        Получает исторические данные для одного инструмента.
+        Получает свечи по тикеру за последние N дней.
         
         Args:
-            ticker: Тикер инструмента (например, 'GAZP')
-            days: Количество дней истории
+            ticker: Тикер инструмента (например, 'SBER')
+            days: Количество дней истории для загрузки
+            interval: Интервал свечи в минутах (1, 10, 60)
             
         Returns:
-            DataFrame с историческими данными
+            DataFrame со свечами и колонками: 'begin', 'open', 'close', 'high', 'low', 'volume'
         """
         try:
+            t = Ticker(ticker)
             end_date = datetime.now()
             start_date = end_date - timedelta(days=days)
-            
-            # Формируем URL для MOEX ISS API
-            url = f"{self.base_url}/engines/stock/markets/shares/securities/{ticker}/candles.json"
-            params = {
-                'from': start_date.strftime('%Y-%m-%d'),
-                'till': end_date.strftime('%Y-%m-%d'),
-                'interval': 24,  # 24 = daily candles (более стабильные)
-                'start': 0,
-                'limit': 100
-            }
-            
-            logger.info(f"Запрашиваем данные для {ticker}: {url}")
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            
-            data = response.json()
-            
-            # MOEX API возвращает данные в формате: {"candles": {"columns": [...], "data": [...]}}
-            if 'candles' not in data:
-                logger.warning(f"Нет данных свечей для {ticker}")
-                return pd.DataFrame()
-            
-            candles_data = data['candles']
-            
-            # Получаем названия колонок из ответа API
-            columns = candles_data.get('columns', [])
-            candles = candles_data.get('data', [])
-            
-            if not candles:
-                logger.warning(f"Пустой список свечей для {ticker}")
-                return pd.DataFrame()
-            
-            logger.info(f"Получено {len(candles)} свечей для {ticker}")
-            logger.info(f"Колонки от API: {columns}")
-            
-            # Создаем DataFrame с правильными колонками
-            df = pd.DataFrame(candles, columns=columns)
-            
-            # Переименовываем колонки в наш стандарт
+
+            start_str = start_date.strftime('%Y-%m-%d')
+            end_str = end_date.strftime('%Y-%m-%d')
+
+            # Получаем данные
+            candles_data = t.candles(start=start_str, end=end_str)
+
+            # Преобразуем в DataFrame если это генератор
+            if isinstance(candles_data, pd.DataFrame):
+                df = candles_data
+            else:
+                df = pd.DataFrame(candles_data)
+
+            if df.empty:
+                logger.warning(f"Нет данных по свечам для {ticker} за период {start_str} - {end_str}")
+                return pd.DataFrame(columns=['begin', 'open', 'close', 'high', 'low', 'volume'])
+
+            # Стандартизируем названия колонок
             column_mapping = {
-                'open': 'open',
-                'high': 'high', 
-                'low': 'low',
-                'close': 'close',
-                'volume': 'volume',
-                'begin': 'time',  # или 'end' - смотрим, что приходит
+                'OPEN': 'open', 'open': 'open',
+                'CLOSE': 'close', 'close': 'close',
+                'HIGH': 'high', 'high': 'high',
+                'LOW': 'low', 'low': 'low',
+                'VOLUME': 'volume', 'volume': 'volume',
+                'BEGIN': 'begin', 'begin': 'begin',
+                'END': 'end', 'end': 'end'
             }
+            df = df.rename(columns={col: column_mapping.get(col, col) for col in df.columns if col in column_mapping})
+
+            # Проверяем наличие обязательных колонок
+            required_cols = ['begin', 'open', 'close', 'high', 'low', 'volume']
+            missing_cols = [col for col in required_cols if col not in df.columns]
             
-            # Пробуем найти колонку со временем
-            time_columns = ['begin', 'end', 'tradedate', 'time']
-            for col in time_columns:
-                if col in df.columns:
-                    df.rename(columns={col: 'time'}, inplace=True)
-                    break
-            
-            # Оставляем только нужные колонки
-            needed_columns = ['open', 'high', 'low', 'close', 'volume', 'time']
-            available_columns = [col for col in needed_columns if col in df.columns]
-            
-            if len(available_columns) < 6:
-                logger.error(f"Не хватает колонок для {ticker}. Есть: {df.columns.tolist()}")
-                return pd.DataFrame()
-            
-            df = df[available_columns].copy()
-            
-            # Конвертируем время
-            if 'time' in df.columns:
-                df['time'] = pd.to_datetime(df['time'])
-                df.set_index('time', inplace=True)
-            
-            # Сортируем по времени
-            df.sort_index(inplace=True)
-            
-            logger.info(f"Успешно загружено {len(df)} записей для {ticker}")
+            if missing_cols:
+                logger.error(f"В данных для {ticker} отсутствуют колонки: {missing_cols}")
+                return pd.DataFrame(columns=required_cols)
+
+            # Оставляем только нужные колонки и сортируем по времени
+            df = df[required_cols].copy()
+            df['begin'] = pd.to_datetime(df['begin'])
+            df = df.sort_values('begin').reset_index(drop=True)
+
+            # Конвертируем все в float для безопасности
+            for col in ['open', 'close', 'high', 'low', 'volume']:
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+
+            logger.debug(f"Загружено {len(df)} свечей для {ticker}")
             return df
-            
+
         except Exception as e:
-            logger.error(f"Ошибка загрузки истории для {ticker}: {e}")
-            import traceback
-            logger.error(traceback.format_exc())
-            return pd.DataFrame()
-    
-    def get_multiple_history(self, tickers: List[str], days: int) -> Dict[str, pd.DataFrame]:
+            logger.error(f"Ошибка получения свечей для {ticker}: {e}")
+            return pd.DataFrame(columns=['begin', 'open', 'close', 'high', 'low', 'volume'])
+
+    def get_current_price(self, ticker: str) -> Optional[float]:
         """
-        Получает исторические данные для нескольких инструментов.
-        
-        Args:
-            tickers: Список тикеров
-            days: Количество дней истории
-            
-        Returns:
-            Словарь {тикер: DataFrame}
-        """
-        result = {}
-        for ticker in tickers:
-            result[ticker] = self.get_history(ticker, days)
-        return result
-    
-    def get_last_candles(self, ticker: str, lookback: int = 100) -> pd.DataFrame:
-        """
-        Получает последние N свечей для инструмента.
-        
-        Args:
-            ticker: Тикер инструмента
-            lookback: Количество последних свечей
-            
-        Returns:
-            DataFrame с последними свечами
-        """
-        try:
-            url = f"{self.base_url}/engines/stock/markets/shares/securities/{ticker}/candles.json"
-            params = {
-                'interval': 24,  # daily candles
-                'limit': lookback
-            }
-            
-            response = requests.get(url, params=params)
-            response.raise_for_status()
-            
-            data = response.json()
-            
-            if 'candles' not in data:
-                return pd.DataFrame()
-            
-            candles_data = data['candles']
-            columns = candles_data.get('columns', [])
-            candles = candles_data.get('data', [])
-            
-            if not candles:
-                return pd.DataFrame()
-            
-            df = pd.DataFrame(candles, columns=columns)
-            
-            # Переименовываем колонки
-            if 'begin' in df.columns:
-                df.rename(columns={'begin': 'time'}, inplace=True)
-            elif 'end' in df.columns:
-                df.rename(columns={'end': 'time'}, inplace=True)
-            
-            # Оставляем нужные колонки
-            needed = ['open', 'high', 'low', 'close', 'volume', 'time']
-            available = [col for col in needed if col in df.columns]
-            df = df[available].copy()
-            
-            if 'time' in df.columns:
-                df['time'] = pd.to_datetime(df['time'])
-                df.set_index('time', inplace=True)
-            
-            return df
-            
-        except Exception as e:
-            logger.error(f"Ошибка получения последних свечей для {ticker}: {e}")
-            return pd.DataFrame()
-    
-    def get_all_last_candles(self, tickers: List[str], lookback: int = 100) -> Dict[str, pd.DataFrame]:
-        """
-        Получает последние свечи для всех инструментов.
-        
-        Args:
-            tickers: Список тикеров
-            lookback: Количество последних свечей
-            
-        Returns:
-            Словарь {тикер: DataFrame}
-        """
-        result = {}
-        for ticker in tickers:
-            result[ticker] = self.get_last_candles(ticker, lookback)
-        return result
-    
-    def get_order_book(self, ticker: str) -> Dict:
-        """
-        Получает стакан заявок для инструмента.
+        Получает текущую цену последней сделки по тикеру.
         
         Args:
             ticker: Тикер инструмента
             
         Returns:
-            Словарь с данными стакана
+            Текущая цена или None в случае ошибки
         """
         try:
-            url = f"{self.base_url}/engines/stock/markets/shares/securities/{ticker}/orderbook.json"
-            response = requests.get(url)
-            response.raise_for_status()
+            t = Ticker(ticker)
             
-            data = response.json()
-            return data.get('orderbook', {})
+            # Пробуем получить последнюю свечу
+            today_str = datetime.now().strftime('%Y-%m-%d')
+            candles = t.candles(start=today_str, end=today_str)
             
+            if isinstance(candles, pd.DataFrame) and not candles.empty:
+                # Берем цену закрытия последней свечи
+                price = float(candles['close'].iloc[-1])
+                logger.debug(f"Текущая цена {ticker}: {price} (из свечей)")
+                return price
+            
+            # Если свечей нет, пробуем получить из стакана
+            ob = t.orderbook()
+            if isinstance(ob, pd.DataFrame) and not ob.empty:
+                bids = ob[ob['side'] == 'Bid']
+                asks = ob[ob['side'] == 'Ask']
+                if not bids.empty and not asks.empty:
+                    best_bid = float(bids['price'].max())
+                    best_ask = float(asks['price'].min())
+                    mid_price = (best_bid + best_ask) / 2
+                    logger.debug(f"Текущая цена {ticker}: {mid_price} (из стакана)")
+                    return mid_price
+            
+            logger.warning(f"Не удалось получить цену для {ticker}")
+            return None
+            
+        except Exception as e:
+            logger.error(f"Ошибка получения цены для {ticker}: {e}")
+            return None
+
+    def get_orderbook(self, ticker: str, depth: int = 10) -> Dict[str, pd.DataFrame]:
+        """
+        Получает стакан котировок.
+        
+        Args:
+            ticker: Тикер инструмента
+            depth: Глубина стакана (количество уровней)
+            
+        Returns:
+            Словарь с bid и ask DataFrame'ами (колонки: price, volume)
+        """
+        try:
+            t = Ticker(ticker)
+            ob_data = t.orderbook()
+
+            if isinstance(ob_data, pd.DataFrame) and not ob_data.empty:
+                bids = ob_data[ob_data['side'] == 'Bid'][['price', 'volume']].head(depth)
+                asks = ob_data[ob_data['side'] == 'Ask'][['price', 'volume']].head(depth)
+                
+                # Конвертируем в float где нужно
+                bids['price'] = pd.to_numeric(bids['price'], errors='coerce')
+                bids['volume'] = pd.to_numeric(bids['volume'], errors='coerce')
+                asks['price'] = pd.to_numeric(asks['price'], errors='coerce')
+                asks['volume'] = pd.to_numeric(asks['volume'], errors='coerce')
+                
+                return {
+                    'bids': bids.reset_index(drop=True),
+                    'asks': asks.reset_index(drop=True)
+                }
+            else:
+                return {'bids': pd.DataFrame(), 'asks': pd.DataFrame()}
+                
         except Exception as e:
             logger.error(f"Ошибка получения стакана для {ticker}: {e}")
-            return {}
+            return {'bids': pd.DataFrame(), 'asks': pd.DataFrame()}
+
+    def get_tickers_list(self, market: str = 'stocks') -> List[str]:
+        """
+        Возвращает список всех доступных тикеров на указанном рынке.
+        В moexalgo нет прямого метода, поэтому возвращаем список из конфига.
+        
+        Args:
+            market: Рынок ('stocks', 'futures', 'currency')
+            
+        Returns:
+            Список тикеров
+        """
+        # Пока возвращаем пустой список, так как в проекте тикеры берутся из конфига
+        # В будущем можно добавить парсинг с сайта MOEX
+        logger.warning("Метод get_tickers_list не полностью реализован в moexalgo")
+        return []
+
+    def get_ticker_info(self, ticker: str) -> Optional[Dict]:
+        """
+        Получает основную информацию о тикере.
+        В moexalgo нет прямого метода, возвращаем базовую информацию.
+        
+        Args:
+            ticker: Тикер инструмента
+            
+        Returns:
+            Словарь с информацией о тикере или None
+        """
+        try:
+            # Базовая информация о тикере
+            # В реальном проекте можно добавить загрузку из CSV файла со справочником
+            sector_map = {
+                'SBER': 'Finance',
+                'GAZP': 'Energy',
+                'LKOH': 'Energy',
+                'ROSN': 'Energy',
+                'YDEX': 'IT',
+                'PLZL': 'Metals',
+                'NLMK': 'Metals',
+                'MGNT': 'Retail',
+                'AFLT': 'Transport',
+                'VTBR': 'Finance'
+            }
+            
+            name_map = {
+                'SBER': 'Сбербанк',
+                'GAZP': 'Газпром',
+                'LKOH': 'Лукойл',
+                'ROSN': 'Роснефть',
+                'YDEX': 'Яндекс',
+                'PLZL': 'Полюс',
+                'NLMK': 'НЛМК',
+                'MGNT': 'Магнит',
+                'AFLT': 'Аэрофлот',
+                'VTBR': 'ВТБ'
+            }
+            
+            return {
+                'ticker': ticker,
+                'name': name_map.get(ticker, ticker),
+                'sector': sector_map.get(ticker, 'unknown'),
+                'lot_size': 1
+            }
+            
+        except Exception as e:
+            logger.error(f"Ошибка получения информации для {ticker}: {e}")
+            return {
+                'ticker': ticker,
+                'name': ticker,
+                'sector': 'unknown',
+                'lot_size': 1
+            }
+
+
+# Для тестирования
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.DEBUG)
+    client = MoexClient()
+    
+    # Тест 1: Получение свечей
+    ticker = "SBER"
+    print(f"\n{'='*50}")
+    print(f"ТЕСТИРОВАНИЕ КЛИЕНТА MOEXALGO")
+    print(f"{'='*50}")
+    
+    print(f"\n1. Получение свечей для {ticker} за 3 дня:")
+    candles = client.get_candles(ticker, days=3)
+    if not candles.empty:
+        print(f"   ✅ Загружено {len(candles)} свечей")
+        print(f"   Первые 3 записи:")
+        print(candles[['begin', 'open', 'close', 'volume']].head(3).to_string(index=False))
+    else:
+        print(f"   ❌ Не удалось загрузить свечи")
+    
+    # Тест 2: Текущая цена
+    print(f"\n2. Текущая цена {ticker}:")
+    price = client.get_current_price(ticker)
+    if price:
+        print(f"   ✅ {price:.2f} RUB")
+    else:
+        print(f"   ❌ Не удалось получить цену")
+    
+    # Тест 3: Информация о тикере
+    print(f"\n3. Информация о {ticker}:")
+    info = client.get_ticker_info(ticker)
+    if info:
+        print(f"   Название: {info['name']}")
+        print(f"   Сектор: {info['sector']}")
