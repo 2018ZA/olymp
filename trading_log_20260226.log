@@ -1,0 +1,428 @@
+2026-02-26 06:46:56,655 - trading_bot - INFO - StockScreener инициализирован. Доступно тикеров: 26
+2026-02-26 06:46:56,655 - trading_bot - INFO - StockScreener инициализирован. Доступно тикеров: 26
+2026-02-26 06:46:56,656 - trading_bot - INFO - Начинаем анализ 26 акций...
+2026-02-26 06:46:56,656 - trading_bot - INFO - Начинаем анализ 26 акций...
+2026-02-26 06:46:56,656 - trading_bot - INFO - Запрашиваем данные для GAZP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GAZP/candles.json
+2026-02-26 06:46:56,656 - trading_bot - INFO - Запрашиваем данные для GAZP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GAZP/candles.json
+2026-02-26 06:46:57,417 - trading_bot - INFO - Получено 28 свечей для GAZP
+2026-02-26 06:46:57,417 - trading_bot - INFO - Получено 28 свечей для GAZP
+2026-02-26 06:46:57,417 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:46:57,417 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:46:57,434 - trading_bot - INFO - Успешно загружено 28 записей для GAZP
+2026-02-26 06:46:57,434 - trading_bot - INFO - Успешно загружено 28 записей для GAZP
+2026-02-26 06:46:57,948 - trading_bot - INFO - Запрашиваем данные для SBER: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBER/candles.json
+2026-02-26 06:46:57,948 - trading_bot - INFO - Запрашиваем данные для SBER: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBER/candles.json
+2026-02-26 06:46:58,137 - trading_bot - INFO - Получено 28 свечей для SBER
+2026-02-26 06:46:58,137 - trading_bot - INFO - Получено 28 свечей для SBER
+2026-02-26 06:46:58,138 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:46:58,138 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:46:58,141 - trading_bot - INFO - Успешно загружено 28 записей для SBER
+2026-02-26 06:46:58,141 - trading_bot - INFO - Успешно загружено 28 записей для SBER
+2026-02-26 06:46:58,649 - trading_bot - INFO - Запрашиваем данные для SBERP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBERP/candles.json
+2026-02-26 06:46:58,649 - trading_bot - INFO - Запрашиваем данные для SBERP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBERP/candles.json
+2026-02-26 06:47:01,263 - trading_bot - INFO - Получено 28 свечей для SBERP
+2026-02-26 06:47:01,263 - trading_bot - INFO - Получено 28 свечей для SBERP
+2026-02-26 06:47:01,263 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:01,263 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:01,267 - trading_bot - INFO - Успешно загружено 28 записей для SBERP
+2026-02-26 06:47:01,267 - trading_bot - INFO - Успешно загружено 28 записей для SBERP
+2026-02-26 06:47:01,777 - trading_bot - INFO - Запрашиваем данные для LKOH: https://iss.moex.com/iss/engines/stock/markets/shares/securities/LKOH/candles.json
+2026-02-26 06:47:01,777 - trading_bot - INFO - Запрашиваем данные для LKOH: https://iss.moex.com/iss/engines/stock/markets/shares/securities/LKOH/candles.json
+2026-02-26 06:47:02,149 - trading_bot - INFO - Получено 28 свечей для LKOH
+2026-02-26 06:47:02,149 - trading_bot - INFO - Получено 28 свечей для LKOH
+2026-02-26 06:47:02,149 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:02,149 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:02,153 - trading_bot - INFO - Успешно загружено 28 записей для LKOH
+2026-02-26 06:47:02,153 - trading_bot - INFO - Успешно загружено 28 записей для LKOH
+2026-02-26 06:47:02,663 - trading_bot - INFO - Запрашиваем данные для ROSN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ROSN/candles.json
+2026-02-26 06:47:02,663 - trading_bot - INFO - Запрашиваем данные для ROSN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ROSN/candles.json
+2026-02-26 06:47:03,982 - trading_bot - INFO - Получено 28 свечей для ROSN
+2026-02-26 06:47:03,982 - trading_bot - INFO - Получено 28 свечей для ROSN
+2026-02-26 06:47:03,982 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:03,982 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:03,986 - trading_bot - INFO - Успешно загружено 28 записей для ROSN
+2026-02-26 06:47:03,986 - trading_bot - INFO - Успешно загружено 28 записей для ROSN
+2026-02-26 06:47:04,493 - trading_bot - INFO - Запрашиваем данные для TATN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/TATN/candles.json
+2026-02-26 06:47:04,493 - trading_bot - INFO - Запрашиваем данные для TATN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/TATN/candles.json
+2026-02-26 06:47:05,452 - trading_bot - INFO - Получено 28 свечей для TATN
+2026-02-26 06:47:05,452 - trading_bot - INFO - Получено 28 свечей для TATN
+2026-02-26 06:47:05,453 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:05,453 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:05,456 - trading_bot - INFO - Успешно загружено 28 записей для TATN
+2026-02-26 06:47:05,456 - trading_bot - INFO - Успешно загружено 28 записей для TATN
+2026-02-26 06:47:05,964 - trading_bot - INFO - Запрашиваем данные для NVTK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NVTK/candles.json
+2026-02-26 06:47:05,964 - trading_bot - INFO - Запрашиваем данные для NVTK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NVTK/candles.json
+2026-02-26 06:47:06,223 - trading_bot - INFO - Получено 28 свечей для NVTK
+2026-02-26 06:47:06,223 - trading_bot - INFO - Получено 28 свечей для NVTK
+2026-02-26 06:47:06,224 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:06,224 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:06,226 - trading_bot - INFO - Успешно загружено 28 записей для NVTK
+2026-02-26 06:47:06,226 - trading_bot - INFO - Успешно загружено 28 записей для NVTK
+2026-02-26 06:47:06,737 - trading_bot - INFO - Запрашиваем данные для GMKN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GMKN/candles.json
+2026-02-26 06:47:06,737 - trading_bot - INFO - Запрашиваем данные для GMKN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GMKN/candles.json
+2026-02-26 06:47:07,067 - trading_bot - INFO - Получено 28 свечей для GMKN
+2026-02-26 06:47:07,067 - trading_bot - INFO - Получено 28 свечей для GMKN
+2026-02-26 06:47:07,067 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:07,067 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:07,070 - trading_bot - INFO - Успешно загружено 28 записей для GMKN
+2026-02-26 06:47:07,070 - trading_bot - INFO - Успешно загружено 28 записей для GMKN
+2026-02-26 06:47:07,577 - trading_bot - INFO - Запрашиваем данные для PLZL: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PLZL/candles.json
+2026-02-26 06:47:07,577 - trading_bot - INFO - Запрашиваем данные для PLZL: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PLZL/candles.json
+2026-02-26 06:47:07,770 - trading_bot - INFO - Получено 28 свечей для PLZL
+2026-02-26 06:47:07,770 - trading_bot - INFO - Получено 28 свечей для PLZL
+2026-02-26 06:47:07,770 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:07,770 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:07,773 - trading_bot - INFO - Успешно загружено 28 записей для PLZL
+2026-02-26 06:47:07,773 - trading_bot - INFO - Успешно загружено 28 записей для PLZL
+2026-02-26 06:47:08,282 - trading_bot - INFO - Запрашиваем данные для NLMK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NLMK/candles.json
+2026-02-26 06:47:08,282 - trading_bot - INFO - Запрашиваем данные для NLMK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NLMK/candles.json
+2026-02-26 06:47:10,434 - trading_bot - INFO - Получено 28 свечей для NLMK
+2026-02-26 06:47:10,434 - trading_bot - INFO - Получено 28 свечей для NLMK
+2026-02-26 06:47:10,434 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:10,434 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:10,438 - trading_bot - INFO - Успешно загружено 28 записей для NLMK
+2026-02-26 06:47:10,438 - trading_bot - INFO - Успешно загружено 28 записей для NLMK
+2026-02-26 06:47:10,948 - trading_bot - INFO - Запрашиваем данные для CHMF: https://iss.moex.com/iss/engines/stock/markets/shares/securities/CHMF/candles.json
+2026-02-26 06:47:10,948 - trading_bot - INFO - Запрашиваем данные для CHMF: https://iss.moex.com/iss/engines/stock/markets/shares/securities/CHMF/candles.json
+2026-02-26 06:47:11,128 - trading_bot - INFO - Получено 28 свечей для CHMF
+2026-02-26 06:47:11,128 - trading_bot - INFO - Получено 28 свечей для CHMF
+2026-02-26 06:47:11,128 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:11,128 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:11,132 - trading_bot - INFO - Успешно загружено 28 записей для CHMF
+2026-02-26 06:47:11,132 - trading_bot - INFO - Успешно загружено 28 записей для CHMF
+2026-02-26 06:47:11,642 - trading_bot - INFO - Запрашиваем данные для ALRS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ALRS/candles.json
+2026-02-26 06:47:11,642 - trading_bot - INFO - Запрашиваем данные для ALRS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ALRS/candles.json
+2026-02-26 06:47:11,898 - trading_bot - INFO - Получено 28 свечей для ALRS
+2026-02-26 06:47:11,898 - trading_bot - INFO - Получено 28 свечей для ALRS
+2026-02-26 06:47:11,899 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:11,899 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:11,902 - trading_bot - INFO - Успешно загружено 28 записей для ALRS
+2026-02-26 06:47:11,902 - trading_bot - INFO - Успешно загружено 28 записей для ALRS
+2026-02-26 06:47:12,411 - trading_bot - INFO - Запрашиваем данные для MTLR: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTLR/candles.json
+2026-02-26 06:47:12,411 - trading_bot - INFO - Запрашиваем данные для MTLR: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTLR/candles.json
+2026-02-26 06:47:12,605 - trading_bot - INFO - Получено 28 свечей для MTLR
+2026-02-26 06:47:12,605 - trading_bot - INFO - Получено 28 свечей для MTLR
+2026-02-26 06:47:12,606 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:12,606 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:12,609 - trading_bot - INFO - Успешно загружено 28 записей для MTLR
+2026-02-26 06:47:12,609 - trading_bot - INFO - Успешно загружено 28 записей для MTLR
+2026-02-26 06:47:13,120 - trading_bot - INFO - Запрашиваем данные для YDEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/YDEX/candles.json
+2026-02-26 06:47:13,120 - trading_bot - INFO - Запрашиваем данные для YDEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/YDEX/candles.json
+2026-02-26 06:47:13,319 - trading_bot - INFO - Получено 28 свечей для YDEX
+2026-02-26 06:47:13,319 - trading_bot - INFO - Получено 28 свечей для YDEX
+2026-02-26 06:47:13,319 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:13,319 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:13,323 - trading_bot - INFO - Успешно загружено 28 записей для YDEX
+2026-02-26 06:47:13,323 - trading_bot - INFO - Успешно загружено 28 записей для YDEX
+2026-02-26 06:47:13,832 - trading_bot - INFO - Запрашиваем данные для VKCO: https://iss.moex.com/iss/engines/stock/markets/shares/securities/VKCO/candles.json
+2026-02-26 06:47:13,832 - trading_bot - INFO - Запрашиваем данные для VKCO: https://iss.moex.com/iss/engines/stock/markets/shares/securities/VKCO/candles.json
+2026-02-26 06:47:14,026 - trading_bot - INFO - Получено 28 свечей для VKCO
+2026-02-26 06:47:14,026 - trading_bot - INFO - Получено 28 свечей для VKCO
+2026-02-26 06:47:14,027 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:14,027 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:14,030 - trading_bot - INFO - Успешно загружено 28 записей для VKCO
+2026-02-26 06:47:14,030 - trading_bot - INFO - Успешно загружено 28 записей для VKCO
+2026-02-26 06:47:14,540 - trading_bot - INFO - Запрашиваем данные для MTSS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTSS/candles.json
+2026-02-26 06:47:14,540 - trading_bot - INFO - Запрашиваем данные для MTSS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTSS/candles.json
+2026-02-26 06:47:14,731 - trading_bot - INFO - Получено 28 свечей для MTSS
+2026-02-26 06:47:14,731 - trading_bot - INFO - Получено 28 свечей для MTSS
+2026-02-26 06:47:14,731 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:14,731 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:14,734 - trading_bot - INFO - Успешно загружено 28 записей для MTSS
+2026-02-26 06:47:14,734 - trading_bot - INFO - Успешно загружено 28 записей для MTSS
+2026-02-26 06:47:15,242 - trading_bot - INFO - Запрашиваем данные для POSI: https://iss.moex.com/iss/engines/stock/markets/shares/securities/POSI/candles.json
+2026-02-26 06:47:15,242 - trading_bot - INFO - Запрашиваем данные для POSI: https://iss.moex.com/iss/engines/stock/markets/shares/securities/POSI/candles.json
+2026-02-26 06:47:15,475 - trading_bot - INFO - Получено 28 свечей для POSI
+2026-02-26 06:47:15,475 - trading_bot - INFO - Получено 28 свечей для POSI
+2026-02-26 06:47:15,475 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:15,475 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:15,479 - trading_bot - INFO - Успешно загружено 28 записей для POSI
+2026-02-26 06:47:15,479 - trading_bot - INFO - Успешно загружено 28 записей для POSI
+2026-02-26 06:47:15,990 - trading_bot - INFO - Запрашиваем данные для HEAD: https://iss.moex.com/iss/engines/stock/markets/shares/securities/HEAD/candles.json
+2026-02-26 06:47:15,990 - trading_bot - INFO - Запрашиваем данные для HEAD: https://iss.moex.com/iss/engines/stock/markets/shares/securities/HEAD/candles.json
+2026-02-26 06:47:17,869 - trading_bot - INFO - Получено 28 свечей для HEAD
+2026-02-26 06:47:17,869 - trading_bot - INFO - Получено 28 свечей для HEAD
+2026-02-26 06:47:17,869 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:17,869 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:17,873 - trading_bot - INFO - Успешно загружено 28 записей для HEAD
+2026-02-26 06:47:17,873 - trading_bot - INFO - Успешно загружено 28 записей для HEAD
+2026-02-26 06:47:18,386 - trading_bot - INFO - Запрашиваем данные для AFLT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/AFLT/candles.json
+2026-02-26 06:47:18,386 - trading_bot - INFO - Запрашиваем данные для AFLT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/AFLT/candles.json
+2026-02-26 06:47:22,152 - trading_bot - INFO - Получено 28 свечей для AFLT
+2026-02-26 06:47:22,152 - trading_bot - INFO - Получено 28 свечей для AFLT
+2026-02-26 06:47:22,152 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:22,152 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:22,156 - trading_bot - INFO - Успешно загружено 28 записей для AFLT
+2026-02-26 06:47:22,156 - trading_bot - INFO - Успешно загружено 28 записей для AFLT
+2026-02-26 06:47:22,662 - trading_bot - INFO - Запрашиваем данные для FLOT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/FLOT/candles.json
+2026-02-26 06:47:22,662 - trading_bot - INFO - Запрашиваем данные для FLOT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/FLOT/candles.json
+2026-02-26 06:47:24,305 - trading_bot - INFO - Получено 28 свечей для FLOT
+2026-02-26 06:47:24,305 - trading_bot - INFO - Получено 28 свечей для FLOT
+2026-02-26 06:47:24,306 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:24,306 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:24,310 - trading_bot - INFO - Успешно загружено 28 записей для FLOT
+2026-02-26 06:47:24,310 - trading_bot - INFO - Успешно загружено 28 записей для FLOT
+2026-02-26 06:47:24,821 - trading_bot - INFO - Запрашиваем данные для MOEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MOEX/candles.json
+2026-02-26 06:47:24,821 - trading_bot - INFO - Запрашиваем данные для MOEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MOEX/candles.json
+2026-02-26 06:47:25,022 - trading_bot - INFO - Получено 28 свечей для MOEX
+2026-02-26 06:47:25,022 - trading_bot - INFO - Получено 28 свечей для MOEX
+2026-02-26 06:47:25,022 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:25,022 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:25,025 - trading_bot - INFO - Успешно загружено 28 записей для MOEX
+2026-02-26 06:47:25,025 - trading_bot - INFO - Успешно загружено 28 записей для MOEX
+2026-02-26 06:47:25,532 - trading_bot - INFO - Запрашиваем данные для SVCB: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SVCB/candles.json
+2026-02-26 06:47:25,532 - trading_bot - INFO - Запрашиваем данные для SVCB: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SVCB/candles.json
+2026-02-26 06:47:25,689 - trading_bot - INFO - Получено 28 свечей для SVCB
+2026-02-26 06:47:25,689 - trading_bot - INFO - Получено 28 свечей для SVCB
+2026-02-26 06:47:25,690 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:25,690 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:25,693 - trading_bot - INFO - Успешно загружено 28 записей для SVCB
+2026-02-26 06:47:25,693 - trading_bot - INFO - Успешно загружено 28 записей для SVCB
+2026-02-26 06:47:26,203 - trading_bot - INFO - Запрашиваем данные для T: https://iss.moex.com/iss/engines/stock/markets/shares/securities/T/candles.json
+2026-02-26 06:47:26,203 - trading_bot - INFO - Запрашиваем данные для T: https://iss.moex.com/iss/engines/stock/markets/shares/securities/T/candles.json
+2026-02-26 06:47:26,377 - trading_bot - INFO - Получено 28 свечей для T
+2026-02-26 06:47:26,377 - trading_bot - INFO - Получено 28 свечей для T
+2026-02-26 06:47:26,377 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:26,377 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:26,380 - trading_bot - INFO - Успешно загружено 28 записей для T
+2026-02-26 06:47:26,380 - trading_bot - INFO - Успешно загружено 28 записей для T
+2026-02-26 06:47:26,889 - trading_bot - INFO - Запрашиваем данные для PIKK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PIKK/candles.json
+2026-02-26 06:47:26,889 - trading_bot - INFO - Запрашиваем данные для PIKK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PIKK/candles.json
+2026-02-26 06:47:28,233 - trading_bot - INFO - Получено 28 свечей для PIKK
+2026-02-26 06:47:28,233 - trading_bot - INFO - Получено 28 свечей для PIKK
+2026-02-26 06:47:28,234 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:28,234 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:28,237 - trading_bot - INFO - Успешно загружено 28 записей для PIKK
+2026-02-26 06:47:28,237 - trading_bot - INFO - Успешно загружено 28 записей для PIKK
+2026-02-26 06:47:28,743 - trading_bot - INFO - Запрашиваем данные для MGNT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MGNT/candles.json
+2026-02-26 06:47:28,743 - trading_bot - INFO - Запрашиваем данные для MGNT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MGNT/candles.json
+2026-02-26 06:47:30,104 - trading_bot - INFO - Получено 28 свечей для MGNT
+2026-02-26 06:47:30,104 - trading_bot - INFO - Получено 28 свечей для MGNT
+2026-02-26 06:47:30,104 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:30,104 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:30,107 - trading_bot - INFO - Успешно загружено 28 записей для MGNT
+2026-02-26 06:47:30,107 - trading_bot - INFO - Успешно загружено 28 записей для MGNT
+2026-02-26 06:47:30,615 - trading_bot - INFO - Запрашиваем данные для X5: https://iss.moex.com/iss/engines/stock/markets/shares/securities/X5/candles.json
+2026-02-26 06:47:30,615 - trading_bot - INFO - Запрашиваем данные для X5: https://iss.moex.com/iss/engines/stock/markets/shares/securities/X5/candles.json
+2026-02-26 06:47:30,781 - trading_bot - INFO - Получено 28 свечей для X5
+2026-02-26 06:47:30,781 - trading_bot - INFO - Получено 28 свечей для X5
+2026-02-26 06:47:30,782 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:30,782 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 06:47:30,785 - trading_bot - INFO - Успешно загружено 28 записей для X5
+2026-02-26 06:47:30,785 - trading_bot - INFO - Успешно загружено 28 записей для X5
+2026-02-26 06:47:31,294 - trading_bot - INFO - Анализ завершен. Найдено 25 акций с оценкой >30
+2026-02-26 06:47:31,294 - trading_bot - INFO - Анализ завершен. Найдено 25 акций с оценкой >30
+2026-02-26 07:22:29,433 - trading_bot - INFO - StockScreener инициализирован. Доступно тикеров: 26
+2026-02-26 07:22:29,433 - trading_bot - INFO - StockScreener инициализирован. Доступно тикеров: 26
+2026-02-26 07:22:29,434 - trading_bot - INFO - Начинаем анализ 26 акций...
+2026-02-26 07:22:29,434 - trading_bot - INFO - Начинаем анализ 26 акций...
+2026-02-26 07:22:29,434 - trading_bot - INFO - Запрашиваем данные для GAZP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GAZP/candles.json
+2026-02-26 07:22:29,434 - trading_bot - INFO - Запрашиваем данные для GAZP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GAZP/candles.json
+2026-02-26 07:22:29,969 - trading_bot - INFO - Получено 29 свечей для GAZP
+2026-02-26 07:22:29,969 - trading_bot - INFO - Получено 29 свечей для GAZP
+2026-02-26 07:22:29,969 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:29,969 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:29,989 - trading_bot - INFO - Успешно загружено 29 записей для GAZP
+2026-02-26 07:22:29,989 - trading_bot - INFO - Успешно загружено 29 записей для GAZP
+2026-02-26 07:22:30,500 - trading_bot - INFO - Запрашиваем данные для SBER: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBER/candles.json
+2026-02-26 07:22:30,500 - trading_bot - INFO - Запрашиваем данные для SBER: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBER/candles.json
+2026-02-26 07:22:30,699 - trading_bot - INFO - Получено 29 свечей для SBER
+2026-02-26 07:22:30,699 - trading_bot - INFO - Получено 29 свечей для SBER
+2026-02-26 07:22:30,700 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:30,700 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:30,703 - trading_bot - INFO - Успешно загружено 29 записей для SBER
+2026-02-26 07:22:30,703 - trading_bot - INFO - Успешно загружено 29 записей для SBER
+2026-02-26 07:22:31,213 - trading_bot - INFO - Запрашиваем данные для SBERP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBERP/candles.json
+2026-02-26 07:22:31,213 - trading_bot - INFO - Запрашиваем данные для SBERP: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SBERP/candles.json
+2026-02-26 07:22:31,403 - trading_bot - INFO - Получено 29 свечей для SBERP
+2026-02-26 07:22:31,403 - trading_bot - INFO - Получено 29 свечей для SBERP
+2026-02-26 07:22:31,403 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:31,403 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:31,406 - trading_bot - INFO - Успешно загружено 29 записей для SBERP
+2026-02-26 07:22:31,406 - trading_bot - INFO - Успешно загружено 29 записей для SBERP
+2026-02-26 07:22:31,915 - trading_bot - INFO - Запрашиваем данные для LKOH: https://iss.moex.com/iss/engines/stock/markets/shares/securities/LKOH/candles.json
+2026-02-26 07:22:31,915 - trading_bot - INFO - Запрашиваем данные для LKOH: https://iss.moex.com/iss/engines/stock/markets/shares/securities/LKOH/candles.json
+2026-02-26 07:22:32,120 - trading_bot - INFO - Получено 29 свечей для LKOH
+2026-02-26 07:22:32,120 - trading_bot - INFO - Получено 29 свечей для LKOH
+2026-02-26 07:22:32,120 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:32,120 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:32,124 - trading_bot - INFO - Успешно загружено 29 записей для LKOH
+2026-02-26 07:22:32,124 - trading_bot - INFO - Успешно загружено 29 записей для LKOH
+2026-02-26 07:22:32,636 - trading_bot - INFO - Запрашиваем данные для ROSN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ROSN/candles.json
+2026-02-26 07:22:32,636 - trading_bot - INFO - Запрашиваем данные для ROSN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ROSN/candles.json
+2026-02-26 07:22:32,841 - trading_bot - INFO - Получено 29 свечей для ROSN
+2026-02-26 07:22:32,841 - trading_bot - INFO - Получено 29 свечей для ROSN
+2026-02-26 07:22:32,841 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:32,841 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:32,844 - trading_bot - INFO - Успешно загружено 29 записей для ROSN
+2026-02-26 07:22:32,844 - trading_bot - INFO - Успешно загружено 29 записей для ROSN
+2026-02-26 07:22:33,351 - trading_bot - INFO - Запрашиваем данные для TATN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/TATN/candles.json
+2026-02-26 07:22:33,351 - trading_bot - INFO - Запрашиваем данные для TATN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/TATN/candles.json
+2026-02-26 07:22:34,002 - trading_bot - INFO - Получено 29 свечей для TATN
+2026-02-26 07:22:34,002 - trading_bot - INFO - Получено 29 свечей для TATN
+2026-02-26 07:22:34,002 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:34,002 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:34,005 - trading_bot - INFO - Успешно загружено 29 записей для TATN
+2026-02-26 07:22:34,005 - trading_bot - INFO - Успешно загружено 29 записей для TATN
+2026-02-26 07:22:34,512 - trading_bot - INFO - Запрашиваем данные для NVTK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NVTK/candles.json
+2026-02-26 07:22:34,512 - trading_bot - INFO - Запрашиваем данные для NVTK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NVTK/candles.json
+2026-02-26 07:22:35,002 - trading_bot - INFO - Получено 29 свечей для NVTK
+2026-02-26 07:22:35,002 - trading_bot - INFO - Получено 29 свечей для NVTK
+2026-02-26 07:22:35,003 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:35,003 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:35,006 - trading_bot - INFO - Успешно загружено 29 записей для NVTK
+2026-02-26 07:22:35,006 - trading_bot - INFO - Успешно загружено 29 записей для NVTK
+2026-02-26 07:22:35,513 - trading_bot - INFO - Запрашиваем данные для GMKN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GMKN/candles.json
+2026-02-26 07:22:35,513 - trading_bot - INFO - Запрашиваем данные для GMKN: https://iss.moex.com/iss/engines/stock/markets/shares/securities/GMKN/candles.json
+2026-02-26 07:22:35,760 - trading_bot - INFO - Получено 29 свечей для GMKN
+2026-02-26 07:22:35,760 - trading_bot - INFO - Получено 29 свечей для GMKN
+2026-02-26 07:22:35,761 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:35,761 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:35,764 - trading_bot - INFO - Успешно загружено 29 записей для GMKN
+2026-02-26 07:22:35,764 - trading_bot - INFO - Успешно загружено 29 записей для GMKN
+2026-02-26 07:22:36,273 - trading_bot - INFO - Запрашиваем данные для PLZL: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PLZL/candles.json
+2026-02-26 07:22:36,273 - trading_bot - INFO - Запрашиваем данные для PLZL: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PLZL/candles.json
+2026-02-26 07:22:36,444 - trading_bot - INFO - Получено 29 свечей для PLZL
+2026-02-26 07:22:36,444 - trading_bot - INFO - Получено 29 свечей для PLZL
+2026-02-26 07:22:36,444 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:36,444 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:36,447 - trading_bot - INFO - Успешно загружено 29 записей для PLZL
+2026-02-26 07:22:36,447 - trading_bot - INFO - Успешно загружено 29 записей для PLZL
+2026-02-26 07:22:36,956 - trading_bot - INFO - Запрашиваем данные для NLMK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NLMK/candles.json
+2026-02-26 07:22:36,956 - trading_bot - INFO - Запрашиваем данные для NLMK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/NLMK/candles.json
+2026-02-26 07:22:38,557 - trading_bot - INFO - Получено 29 свечей для NLMK
+2026-02-26 07:22:38,557 - trading_bot - INFO - Получено 29 свечей для NLMK
+2026-02-26 07:22:38,557 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:38,557 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:38,561 - trading_bot - INFO - Успешно загружено 29 записей для NLMK
+2026-02-26 07:22:38,561 - trading_bot - INFO - Успешно загружено 29 записей для NLMK
+2026-02-26 07:22:39,071 - trading_bot - INFO - Запрашиваем данные для CHMF: https://iss.moex.com/iss/engines/stock/markets/shares/securities/CHMF/candles.json
+2026-02-26 07:22:39,071 - trading_bot - INFO - Запрашиваем данные для CHMF: https://iss.moex.com/iss/engines/stock/markets/shares/securities/CHMF/candles.json
+2026-02-26 07:22:39,246 - trading_bot - INFO - Получено 29 свечей для CHMF
+2026-02-26 07:22:39,246 - trading_bot - INFO - Получено 29 свечей для CHMF
+2026-02-26 07:22:39,247 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:39,247 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:39,250 - trading_bot - INFO - Успешно загружено 29 записей для CHMF
+2026-02-26 07:22:39,250 - trading_bot - INFO - Успешно загружено 29 записей для CHMF
+2026-02-26 07:22:39,759 - trading_bot - INFO - Запрашиваем данные для ALRS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ALRS/candles.json
+2026-02-26 07:22:39,759 - trading_bot - INFO - Запрашиваем данные для ALRS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/ALRS/candles.json
+2026-02-26 07:22:40,322 - trading_bot - INFO - Получено 29 свечей для ALRS
+2026-02-26 07:22:40,322 - trading_bot - INFO - Получено 29 свечей для ALRS
+2026-02-26 07:22:40,322 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:40,322 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:40,326 - trading_bot - INFO - Успешно загружено 29 записей для ALRS
+2026-02-26 07:22:40,326 - trading_bot - INFO - Успешно загружено 29 записей для ALRS
+2026-02-26 07:22:40,835 - trading_bot - INFO - Запрашиваем данные для MTLR: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTLR/candles.json
+2026-02-26 07:22:40,835 - trading_bot - INFO - Запрашиваем данные для MTLR: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTLR/candles.json
+2026-02-26 07:22:41,403 - trading_bot - INFO - Получено 29 свечей для MTLR
+2026-02-26 07:22:41,403 - trading_bot - INFO - Получено 29 свечей для MTLR
+2026-02-26 07:22:41,403 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:41,403 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:41,407 - trading_bot - INFO - Успешно загружено 29 записей для MTLR
+2026-02-26 07:22:41,407 - trading_bot - INFO - Успешно загружено 29 записей для MTLR
+2026-02-26 07:22:41,918 - trading_bot - INFO - Запрашиваем данные для YDEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/YDEX/candles.json
+2026-02-26 07:22:41,918 - trading_bot - INFO - Запрашиваем данные для YDEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/YDEX/candles.json
+2026-02-26 07:22:42,141 - trading_bot - INFO - Получено 29 свечей для YDEX
+2026-02-26 07:22:42,141 - trading_bot - INFO - Получено 29 свечей для YDEX
+2026-02-26 07:22:42,141 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:42,141 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:42,145 - trading_bot - INFO - Успешно загружено 29 записей для YDEX
+2026-02-26 07:22:42,145 - trading_bot - INFO - Успешно загружено 29 записей для YDEX
+2026-02-26 07:22:42,651 - trading_bot - INFO - Запрашиваем данные для VKCO: https://iss.moex.com/iss/engines/stock/markets/shares/securities/VKCO/candles.json
+2026-02-26 07:22:42,651 - trading_bot - INFO - Запрашиваем данные для VKCO: https://iss.moex.com/iss/engines/stock/markets/shares/securities/VKCO/candles.json
+2026-02-26 07:22:43,328 - trading_bot - INFO - Получено 29 свечей для VKCO
+2026-02-26 07:22:43,328 - trading_bot - INFO - Получено 29 свечей для VKCO
+2026-02-26 07:22:43,328 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:43,328 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:43,332 - trading_bot - INFO - Успешно загружено 29 записей для VKCO
+2026-02-26 07:22:43,332 - trading_bot - INFO - Успешно загружено 29 записей для VKCO
+2026-02-26 07:22:43,838 - trading_bot - INFO - Запрашиваем данные для MTSS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTSS/candles.json
+2026-02-26 07:22:43,838 - trading_bot - INFO - Запрашиваем данные для MTSS: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MTSS/candles.json
+2026-02-26 07:22:44,049 - trading_bot - INFO - Получено 29 свечей для MTSS
+2026-02-26 07:22:44,049 - trading_bot - INFO - Получено 29 свечей для MTSS
+2026-02-26 07:22:44,050 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:44,050 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:44,053 - trading_bot - INFO - Успешно загружено 29 записей для MTSS
+2026-02-26 07:22:44,053 - trading_bot - INFO - Успешно загружено 29 записей для MTSS
+2026-02-26 07:22:44,563 - trading_bot - INFO - Запрашиваем данные для POSI: https://iss.moex.com/iss/engines/stock/markets/shares/securities/POSI/candles.json
+2026-02-26 07:22:44,563 - trading_bot - INFO - Запрашиваем данные для POSI: https://iss.moex.com/iss/engines/stock/markets/shares/securities/POSI/candles.json
+2026-02-26 07:22:44,761 - trading_bot - INFO - Получено 29 свечей для POSI
+2026-02-26 07:22:44,761 - trading_bot - INFO - Получено 29 свечей для POSI
+2026-02-26 07:22:44,761 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:44,761 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:44,765 - trading_bot - INFO - Успешно загружено 29 записей для POSI
+2026-02-26 07:22:44,765 - trading_bot - INFO - Успешно загружено 29 записей для POSI
+2026-02-26 07:22:45,275 - trading_bot - INFO - Запрашиваем данные для HEAD: https://iss.moex.com/iss/engines/stock/markets/shares/securities/HEAD/candles.json
+2026-02-26 07:22:45,275 - trading_bot - INFO - Запрашиваем данные для HEAD: https://iss.moex.com/iss/engines/stock/markets/shares/securities/HEAD/candles.json
+2026-02-26 07:22:45,485 - trading_bot - INFO - Получено 29 свечей для HEAD
+2026-02-26 07:22:45,485 - trading_bot - INFO - Получено 29 свечей для HEAD
+2026-02-26 07:22:45,485 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:45,485 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:45,489 - trading_bot - INFO - Успешно загружено 29 записей для HEAD
+2026-02-26 07:22:45,489 - trading_bot - INFO - Успешно загружено 29 записей для HEAD
+2026-02-26 07:22:45,995 - trading_bot - INFO - Запрашиваем данные для AFLT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/AFLT/candles.json
+2026-02-26 07:22:45,995 - trading_bot - INFO - Запрашиваем данные для AFLT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/AFLT/candles.json
+2026-02-26 07:22:53,334 - trading_bot - INFO - Получено 29 свечей для AFLT
+2026-02-26 07:22:53,334 - trading_bot - INFO - Получено 29 свечей для AFLT
+2026-02-26 07:22:53,335 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:53,335 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:53,339 - trading_bot - INFO - Успешно загружено 29 записей для AFLT
+2026-02-26 07:22:53,339 - trading_bot - INFO - Успешно загружено 29 записей для AFLT
+2026-02-26 07:22:53,846 - trading_bot - INFO - Запрашиваем данные для FLOT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/FLOT/candles.json
+2026-02-26 07:22:53,846 - trading_bot - INFO - Запрашиваем данные для FLOT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/FLOT/candles.json
+2026-02-26 07:22:54,044 - trading_bot - INFO - Получено 29 свечей для FLOT
+2026-02-26 07:22:54,044 - trading_bot - INFO - Получено 29 свечей для FLOT
+2026-02-26 07:22:54,044 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:54,044 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:22:54,048 - trading_bot - INFO - Успешно загружено 29 записей для FLOT
+2026-02-26 07:22:54,048 - trading_bot - INFO - Успешно загружено 29 записей для FLOT
+2026-02-26 07:22:54,556 - trading_bot - INFO - Запрашиваем данные для MOEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MOEX/candles.json
+2026-02-26 07:22:54,556 - trading_bot - INFO - Запрашиваем данные для MOEX: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MOEX/candles.json
+2026-02-26 07:23:00,586 - trading_bot - INFO - Получено 29 свечей для MOEX
+2026-02-26 07:23:00,586 - trading_bot - INFO - Получено 29 свечей для MOEX
+2026-02-26 07:23:00,586 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:00,586 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:00,591 - trading_bot - INFO - Успешно загружено 29 записей для MOEX
+2026-02-26 07:23:00,591 - trading_bot - INFO - Успешно загружено 29 записей для MOEX
+2026-02-26 07:23:01,101 - trading_bot - INFO - Запрашиваем данные для SVCB: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SVCB/candles.json
+2026-02-26 07:23:01,101 - trading_bot - INFO - Запрашиваем данные для SVCB: https://iss.moex.com/iss/engines/stock/markets/shares/securities/SVCB/candles.json
+2026-02-26 07:23:02,440 - trading_bot - INFO - Получено 29 свечей для SVCB
+2026-02-26 07:23:02,440 - trading_bot - INFO - Получено 29 свечей для SVCB
+2026-02-26 07:23:02,440 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:02,440 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:02,444 - trading_bot - INFO - Успешно загружено 29 записей для SVCB
+2026-02-26 07:23:02,444 - trading_bot - INFO - Успешно загружено 29 записей для SVCB
+2026-02-26 07:23:02,951 - trading_bot - INFO - Запрашиваем данные для T: https://iss.moex.com/iss/engines/stock/markets/shares/securities/T/candles.json
+2026-02-26 07:23:02,951 - trading_bot - INFO - Запрашиваем данные для T: https://iss.moex.com/iss/engines/stock/markets/shares/securities/T/candles.json
+2026-02-26 07:23:04,214 - trading_bot - INFO - Получено 29 свечей для T
+2026-02-26 07:23:04,214 - trading_bot - INFO - Получено 29 свечей для T
+2026-02-26 07:23:04,214 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:04,214 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:04,218 - trading_bot - INFO - Успешно загружено 29 записей для T
+2026-02-26 07:23:04,218 - trading_bot - INFO - Успешно загружено 29 записей для T
+2026-02-26 07:23:04,726 - trading_bot - INFO - Запрашиваем данные для PIKK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PIKK/candles.json
+2026-02-26 07:23:04,726 - trading_bot - INFO - Запрашиваем данные для PIKK: https://iss.moex.com/iss/engines/stock/markets/shares/securities/PIKK/candles.json
+2026-02-26 07:23:04,932 - trading_bot - INFO - Получено 29 свечей для PIKK
+2026-02-26 07:23:04,932 - trading_bot - INFO - Получено 29 свечей для PIKK
+2026-02-26 07:23:04,932 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:04,932 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:04,936 - trading_bot - INFO - Успешно загружено 29 записей для PIKK
+2026-02-26 07:23:04,936 - trading_bot - INFO - Успешно загружено 29 записей для PIKK
+2026-02-26 07:23:05,445 - trading_bot - INFO - Запрашиваем данные для MGNT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MGNT/candles.json
+2026-02-26 07:23:05,445 - trading_bot - INFO - Запрашиваем данные для MGNT: https://iss.moex.com/iss/engines/stock/markets/shares/securities/MGNT/candles.json
+2026-02-26 07:23:05,624 - trading_bot - INFO - Получено 29 свечей для MGNT
+2026-02-26 07:23:05,624 - trading_bot - INFO - Получено 29 свечей для MGNT
+2026-02-26 07:23:05,624 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:05,624 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:05,628 - trading_bot - INFO - Успешно загружено 29 записей для MGNT
+2026-02-26 07:23:05,628 - trading_bot - INFO - Успешно загружено 29 записей для MGNT
+2026-02-26 07:23:06,134 - trading_bot - INFO - Запрашиваем данные для X5: https://iss.moex.com/iss/engines/stock/markets/shares/securities/X5/candles.json
+2026-02-26 07:23:06,134 - trading_bot - INFO - Запрашиваем данные для X5: https://iss.moex.com/iss/engines/stock/markets/shares/securities/X5/candles.json
+2026-02-26 07:23:06,357 - trading_bot - INFO - Получено 29 свечей для X5
+2026-02-26 07:23:06,357 - trading_bot - INFO - Получено 29 свечей для X5
+2026-02-26 07:23:06,357 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:06,357 - trading_bot - INFO - Колонки от API: ['open', 'close', 'high', 'low', 'value', 'volume', 'begin', 'end']
+2026-02-26 07:23:06,360 - trading_bot - INFO - Успешно загружено 29 записей для X5
+2026-02-26 07:23:06,360 - trading_bot - INFO - Успешно загружено 29 записей для X5
+2026-02-26 07:23:06,869 - trading_bot - INFO - Анализ завершен. Найдено 23 акций с оценкой >30
+2026-02-26 07:23:06,869 - trading_bot - INFO - Анализ завершен. Найдено 23 акций с оценкой >30
